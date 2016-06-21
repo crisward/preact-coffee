@@ -1,0 +1,53 @@
+{
+  "name": "preact-coffee",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "watchify src/index.cjsx -o build/index.js",
+    "build": "browserify src/index.cjsx -d -p [minifyify --uglify [--mangle 0] --map build/index.map.json --output build/index.map.json]  -o build/index.js"
+  },
+  "browserify": {
+    "debug": true,
+    "transform": [
+      [
+        "aliasify"
+      ],
+      [
+        "coffee-reactify",
+        {
+          "extension": ".cjsx",
+          "type": "coffee",
+          "template": "jade"
+        }
+      ],
+      [
+        "coffeeify",
+        {
+          "extension": ".coffee"
+        }
+      ]
+    ]
+  },
+  "aliasify": {
+    "aliases": {
+      "react": "preact-compat",
+      "react-dom": "preact-compat"
+    }
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "aliasify": "^2.0.0",
+    "browserify": "^13.0.1",
+    "coffee-reactify": "^5.0.0",
+    "coffeeify": "^2.0.1",
+    "minifyify": "^7.3.3",
+    "preact": "^4.8.0",
+    "preact-compat": "^1.8.1",
+    "proptypes": "^0.14.3",
+    "watchify": "^3.7.0"
+  }
+}
