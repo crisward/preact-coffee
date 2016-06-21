@@ -1,4 +1,4 @@
-React = require 'preact-compat'
+React = require 'react'
 
 module.exports = class extends React.Component
   
@@ -9,6 +9,6 @@ module.exports = class extends React.Component
 
   render:->
     <div id="foo">
-      <span>Hello, world 2</span>
+      <h1>Hello World</h1>
       <button onClick={@handleClick}> Click Me</button>
     </div>

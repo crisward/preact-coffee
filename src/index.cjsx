@@ -1,5 +1,4 @@
-React =    require 'preact-compat'
-ReactDOM = require 'preact-compat'
+React =    require 'react'
 App =      require './app.cjsx'
 
 React.render((<App />), document.body)

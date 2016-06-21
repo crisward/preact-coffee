@@ -12,9 +12,6 @@
     "debug": true,
     "transform": [
       [
-        "aliasify"
-      ],
-      [
         "coffee-reactify",
         {
           "extension": ".cjsx",
@@ -27,14 +24,18 @@
         {
           "extension": ".coffee"
         }
+      ],
+      [
+        "aliasify",{
+          "aliases": {
+            "react": "preact-compat",
+            "react-dom": "preact-compat"
+          },
+          "appliesTo": {"includeExtensions": [".cjsx"]},
+          "verbose": false
+        }
       ]
     ]
-  },
-  "aliasify": {
-    "aliases": {
-      "react": "preact-compat",
-      "react-dom": "preact-compat"
-    }
   },
   "keywords": [],
   "author": "",
