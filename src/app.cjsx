@@ -4,11 +4,12 @@ module.exports = class extends React.Component
   
   constructor:(props) ->
 
-  handleClick:(e)->
-    alert("hi!")
+  handleClick:(e)=>
+    alert("Hi "+@state.name)
 
   render:->
     <div id="foo">
-      <h1>Hello World</h1>
-      <button onClick={@handleClick}> Click Me</button>
+      <h1>Hello {@state.name || 'World'}</h1>
+      <input value={@state.name} onInput={@linkState('name')} />
+      <button onClick={@handleClick}> Click Me!</button>
     </div>
