@@ -4,7 +4,8 @@ A quick starter template for Preact using CJSX, coffee-script with JSX.
 
 ## Why?
 
-I like coffeescript, React, and small build files. 
+I like coffeescript, React, and small build files.
+Find our more about preact [here](https://preactjs.com)
 
 ## How to use
 
@@ -16,7 +17,7 @@ npm run watch
 open index.html
 ```
 
-## Scripts
+## Npm Scripts
 
 ```
 npm run watch //watch cjsx files and rebuild on change
