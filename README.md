@@ -19,7 +19,7 @@ open index.html
 
 ## Npm Scripts
 
-```
-npm run watch //watch cjsx files and rebuild on change
-npm run build //build and minify js file
+```bash
+npm run watch # watch cjsx files and rebuild on change
+npm run build # build and minify js file
 ```
