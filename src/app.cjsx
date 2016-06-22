@@ -10,6 +10,6 @@ module.exports = class extends React.Component
   render:->
     <div id="foo">
       <h1>Hello {@state.name || 'World'}</h1>
-      <input value={@state.name} onInput={@linkState('name')} />
+      <input placeholder="your name" value={@state.name} onInput={@linkState('name')} />
       <button onClick={@handleClick}> Click Me!</button>
     </div>
