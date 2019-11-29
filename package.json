@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "watchify src/index.cjsx -o build/index.js",
-    "build": "browserify src/index.cjsx -d -p [minifyify --uglify [--mangle 0] --map build/index.map.json --output build/index.map.json]  -o build/index.js"
+    "watch": "webpack --watch --mode development",
+    "build": "NODE_ENV=production webpack --mode production"
   },
   "browserify": {
     "debug": true,
@@ -46,15 +46,18 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "aliasify": "^2.1.0",
-    "browserify": "^16.0.1",
-    "coffee-reactify": "^5.1.0",
-    "coffeeify": "^3.0.1",
-    "coffeescript": "^2.3.1",
-    "minifyify": "^7.3.5",
-    "preact": "^8.3.1",
-    "preact-compat": "^3.18.4",
-    "proptypes": "^1.1.0",
-    "watchify": "^3.11.0"
+    "@babel/core": "^7.7.4",
+    "@babel/plugin-transform-react-jsx": "^7.7.4",
+    "@babel/preset-env": "^7.7.4",
+    "@babel/preset-react": "^7.7.4",
+    "babel-loader": "^8.0.6",
+    "babel-minify-webpack-plugin": "^0.3.1",
+    "coffee-loader": "^0.9.0",
+    "coffeescript": "^2.4.1",
+    "istanbul-instrumenter-loader": "^3.0.1",
+    "preact": "^10.0.5",
+    "source-map-loader": "^0.2.4",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
   }
 }
