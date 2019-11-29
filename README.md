@@ -1,6 +1,7 @@
 # Preact Coffee
 
 A quick starter template for Preact using CJSX, coffee-script with JSX.
+This project is setup to use preact compat, so all the files look like we're using react.
 
 ## Why?
 
@@ -20,6 +21,9 @@ open index.html
 ## Npm Scripts
 
 ```bash
-npm run watch # watch cjsx files and rebuild on change
+npm run watch # watch coffee & cjsx files and rebuild on change
 npm run build # build and minify js file
 ```
+
+## Recent Updates
+Uses latest version of Preact, so hooks, fragment etc are available. 
