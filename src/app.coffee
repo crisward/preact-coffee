@@ -1,5 +1,5 @@
 import React from 'react'
-import Counter from './hook'
+import Counter from './counter'
 
 module.exports = class extends React.Component
   

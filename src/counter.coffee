@@ -1,10 +1,11 @@
 import React, { useState,useCallback } from 'react';
+import {useWindowWidth} from './myhooks'
 
 export default =>
-
   [value, setValue] = useState(0)
   [alert, setAlert] = useState("")
 
+  width = useWindowWidth()
   add = useCallback => setValue((value + 1),[value])
   remove = useCallback => 
     if value > 0 
@@ -21,4 +22,6 @@ export default =>
     {if alert && value == 0
       <p>{alert}</p>
     }
+
+    <p>Width width is {width}px</p>
   </div>
