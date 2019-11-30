@@ -23,5 +23,5 @@ export default =>
       <p>{alert}</p>
     }
 
-    <p>Width width is {width}px</p>
+    <p>Window width is {width}px</p>
   </div>
